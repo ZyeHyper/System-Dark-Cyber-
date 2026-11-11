@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DARK CRUSHER - Cyber Panel</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Efek Background Global -->
+    <div class="cyber-grid"></div>
+    <div class="scanlines"></div>
+
+    <!-- =========================================
+         HALAMAN 1: LOGIN
+    ========================================== -->
+    <section id="page-login" class="page active">
+        <!-- Video Background -->
+        <div class="login-video-bg">
+            <video autoplay loop muted playsinline>
+                <source src="https://upload.zireku.com/get/32w1Sj.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- Kotak Login -->
+        <div class="glass-panel login-box">
+            <h1 class="neon-text">SYSTEM ACCESS</h1>
+            <p class="subtitle">RESTRICTED AREA</p>
+            
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="Enter Username" autocomplete="off">
+            </div>
+            
+            <div class="input-group">
+                <label>Password</label>
+                <div class="pass-wrapper">
+                    <input type="password" id="password" placeholder="Enter Password">
+                    <button type="button" id="togglePass" class="toggle-btn">SHOW</button>
+                </div>
+            </div>
+            
+            <button id="loginBtn" class="btn-cyber">LOGIN</button>
+            <div id="loginMessage" class="message"></div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         HALAMAN 2: DASHBOARD UTAMA
+    ========================================== -->
+    <section id="page-dashboard" class="page">
+        <!-- Header -->
+        <header class="cyber-header">
+            <div class="logo-area">
+                <div class="logo-icon">☠</div>
+                <div class="logo-text">
+                    <h1>DARK CRUSHER</h1>
+                    <span>DEV : ZyeCitedz</span>
+                </div>
+            </div>
+            <nav class="nav-menu">
+                <button class="nav-btn active" data-target="menu-serangan">SERANGAN</button>
+                <button class="nav-btn" data-target="menu-bantuan">BANTUAN</button>
+            </nav>
+        </header>
+
+        <main class="dashboard-content">
+            <!-- TAB: MENU SERANGAN -->
+            <div id="menu-serangan" class="tab-content active">
+                <!-- Video Radar -->
+                <div class="video-container">
+                    <video autoplay loop muted playsinline>
+                        <source src="https://upload.zireku.com/get/limoDg.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay"></div>
+                    <div class="demo-badge">DEMO ONLY</div>
+                </div>
+
+                <!-- Input Target -->
+                <div class="input-target-box">
+                    <label for="targetNumber">MASUKAN NOMOR TARGET</label>
+                    <div class="input-wrapper">
+                        <span class="icon">📱</span>
+                        <input type="tel" id="targetNumber" placeholder="MASUKKAN NOMOR DI SINI" maxlength="15">
+                    </div>
+                </div>
+
+                <!-- Pilihan Mode -->
+                <div class="attack-modes">
+                    <button class="mode-card active" data-mode="SUPER LAG">
+                        <span class="mode-icon">⚡</span>
+                        <span class="mode-name">SUPER LAG</span>
+                    </button>
+                    <button class="mode-card" data-mode="CRASH">
+                        <span class="mode-icon">💥</span>
+                        <span class="mode-name">CRASH</span>
+                    </button>
+                    <button class="mode-card" data-mode="BOOTLOOP">
+                        <span class="mode-icon">🔄</span>
+                        <span class="mode-name">BOOTLOOP</span>
+                    </button>
+                    <button class="mode-card" data-mode="BEKU">
+                        <span class="mode-icon">❄</span>
+                        <span class="mode-name">BEKU</span>
+                    </button>
+                </div>
+
+                <!-- Tombol Eksekusi -->
+                <button id="executeBtn" class="btn-execute">
+                    <span class="btn-text">KIRIM SEKARANG</span>
+                    <span class="loader hidden"></span>
+                </button>
+
+                <!-- Note / Peringatan -->
+                <div class="note-box">
+                    <p><strong>NOTE:</strong> DILARANG SPAM BUG.</p>
+                    <p class="warning-text">*Semua fitur di sini adalah simulasi visual. Tidak ada perintah nyata yang dikirim ke perangkat target.</p>
+                </div>
+            </div>
+
+            <!-- TAB: MENU BANTUAN -->
+            <div id="menu-bantuan" class="tab-content">
+                <div class="glass-panel help-panel">
+                    <h2 class="neon-text-purple">PUSAT BANTUAN</h2>
+                    <p>Butuh bantuan, error, atau kendala sistem?</p>
+                    <p>Developer: <strong>ZyeCitedz</strong></p>
+                    <a href="https://wa.me/6288229286129" target="_blank" class="btn-wa">
+                        HUBUNGI DEVELOPER
+                    </a>
+                </div>
+            </div>
+        </main>
+    </section>
+
+    <!-- MODAL NOTIFIKASI -->
+    <div id="notificationModal" class="modal">
+        <div class="modal-content glass-panel">
+            <h2 id="modalTitle">STATUS</h2>
+            <p id="modalMessage">Pesan simulasi akan muncul di sini.</p>
+            <button id="closeModal" class="btn-cyber">TUTUP</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
